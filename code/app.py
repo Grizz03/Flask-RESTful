@@ -22,7 +22,7 @@ class Item(Resource):
             return {"message': 'An item with name '{}' already exists.".format(name)}, 400
 
         data = request.get_json(force=True)  # Doesnt need content-type header
-        item = {'name': name, 'price': data['price']}  # Accesses price key of data dictionary
+        item = {'name': name, 'price': data['price']}  # Accesses price key of data dictionary.
         items.append(item)
         return item, 201  # Created successfully
 
